@@ -6,12 +6,11 @@ MASTHEAD
 
 
 .site-masthead {
-  margin-block: 32px 16px;
-
   .content {
     display: flex;
     align-items: center;
     gap: 24px;
+    padding-block: 32px 16px;
   }
 }
 
@@ -24,7 +23,8 @@ MASTHEAD
     gap: 12px;
 
     @include mq('tablet') {
-      gap: 40px;
+      gap: 18px;
+      margin-inline-end: 24px;
     }
   }
 
@@ -37,7 +37,7 @@ MASTHEAD
   }
 
   a {
-    padding: 12px;
+    padding: 8px 16px;
     text-decoration: none;
   }
 }

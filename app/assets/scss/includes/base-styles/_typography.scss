@@ -21,6 +21,10 @@ p {
   line-height: 1.4em;
   color: var(--text-color);
   margin-bottom: 1.2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 blockquote {
@@ -70,4 +74,13 @@ h1, h2, h3, h4, h5, h6,
 
 .text-header--6, h6 {
   @include rem-size(18px);
+}
+
+
+
+.subheader {
+  font-weight: 700;
+  @include rem-size(14px);
+  color: var(--primary);
+  text-transform: uppercase;
 }

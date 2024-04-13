@@ -1,0 +1,54 @@
+.hero {
+  background: var(--primary) url('/assets/images/landing-page/helping-up.jpg') no-repeat center;
+  background-size: cover;
+  height: 600px;
+  border-radius: var(--radius);
+  border-bottom: 60px solid var(--primary);
+  position: relative;
+
+
+  blockquote {
+    padding: 12px 24px;
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 320px;
+
+    p {
+      color: var(--white);
+      font-family: var(--font-serif);
+      @include rem-size(20px);
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    svg {
+      fill: var(--white);
+      width: 44px;
+      height: 34px;
+      position: absolute;
+      left: -40px;
+      top: -14px;
+    }
+  }
+}
+
+
+.mission {
+  position: absolute;
+  padding: 32px;
+  bottom: -30px;
+  right: 32px;
+  max-width: 630px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+
+  p {
+    @include rem-size(28px);
+  }
+}
