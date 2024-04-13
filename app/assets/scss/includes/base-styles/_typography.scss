@@ -1,0 +1,73 @@
+/*
+-----------------------------------------
+TYPOGRAPHY
+-----------------------------------------
+*/
+
+
+/*  Basics */
+
+a {
+  color: var(--link-color);
+  @include transition();
+
+  &:hover {
+    color: var(--primary-light);
+  }
+}
+
+p {
+  @include rem-size($font-size);
+  line-height: 1.4em;
+  color: var(--text-color);
+  margin-bottom: 1.2em;
+}
+
+blockquote {
+
+}
+
+hr {
+
+}
+
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6,
+.text-header--1,
+.text-header--2,
+.text-header--3,
+.text-header--4,
+.text-header--5,
+.text-header--6 {
+  line-height: 1.6;
+  font-weight: var(--bold);
+  color: var(--text-color);
+  margin-bottom: 1em;
+}
+
+.text-header--1, h1 {
+  @include rem-size(36px);
+  font-weight: var(--normal);
+}
+
+.text-header--2, h2 {
+  @include rem-size(32px);
+}
+
+.text-header--3, h3 {
+  @include rem-size(28px);
+}
+
+.text-header--4, h4 {
+  @include rem-size(24px);
+}
+
+.text-header--5, h5 {
+  @include rem-size(20px);
+}
+
+.text-header--6, h6 {
+  @include rem-size(18px);
+}

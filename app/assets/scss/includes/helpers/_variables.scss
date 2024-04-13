@@ -1,0 +1,99 @@
+/*
+-----------------------------------------
+WIDTHS
+-----------------------------------------
+*/
+
+:root {
+  --site-width:             1200px;
+}
+
+
+/*
+-----------------------------------------
+COLORS
+-----------------------------------------
+*/
+
+:root {
+
+  // NEUTRAL
+  --white:                  #fff;
+  --black:                  #000;
+  --gray:                   #4A4A4A;
+  --gray-dark:              #1A1A1A;
+
+  --primary:                #085C2F;
+  --primary-light:          #0B8040;
+  --primary-dark:           #164727;
+  --secondary:              #F9A61A;
+  --secondary-light:        #FFCB78;
+
+
+
+
+  // System Colors
+
+  --success:                #11662C;
+  --error:                  #AD050B;
+
+
+  --base-color:             var(--white);
+  --content-background:     var(--white);
+
+  // Text
+  --text-color:             var(--gray-dark);
+  --link-color:             var(--primary);
+
+
+  // User Select (colors when a user selects objects on screen)
+  --select-background:      var(--primary);
+  --select-text:            var(--white);
+}
+
+
+
+/*
+-----------------------------------------
+FONTS
+-----------------------------------------
+*/
+
+// Font Family
+:root {
+  --font:                   "Nunito", sans-serif;
+  --font-serif:             "Lora", serif;
+}
+
+$font-size:                 16px; // This is a SCSS variable for the mixin function
+
+
+/*
+-----------------------------------------
+BREAKPOINTS
+-----------------------------------------
+*/
+
+$breakpoints: (
+    "desktop-wide":         1248px,
+    "desktop":              1024px,
+    "desktop-small":        992px,
+    "tablet-wide":          850px,
+    "tablet":               768px,
+    "tablet-small":         720px,
+    "phone-wide":           600px,
+    "phone":                480px,
+    "phone-small":          400px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == min {
+      $width: $width + 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

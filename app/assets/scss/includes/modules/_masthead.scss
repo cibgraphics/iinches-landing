@@ -1,0 +1,43 @@
+/*
+-----------------------------------------
+MASTHEAD
+-----------------------------------------
+*/
+
+
+.site-masthead {
+  margin-block: 32px 16px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.main-nav {
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include mq('tablet') {
+      gap: 40px;
+    }
+  }
+
+  li a {
+    @include rem-size(16px);
+
+    @include mq('tablet') {
+      @include rem-size(22px);
+    }
+  }
+
+  a {
+    padding: 12px;
+    text-decoration: none;
+  }
+}
