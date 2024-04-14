@@ -34,6 +34,12 @@ COLORS
 
 
 
+  // Forms
+
+  --brand-primary:          var(--primary);
+
+
+
 
   // System Colors
 
@@ -66,6 +72,10 @@ FONTS
 :root {
   --font:                   "Nunito", sans-serif;
   --font-serif:             "Lora", serif;
+
+  --normal:                400;
+  --semi:                   600;
+  --bold:                   900;
 }
 
 $font-size:                 16px; // This is a SCSS variable for the mixin function
